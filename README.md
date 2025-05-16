@@ -28,10 +28,12 @@ Modul ini digunakan untuk registrasi material yang akan dijual, sesuai kebutuhan
 - Relasi ke Supplier (res.partner)
 - Unit test lengkap
 
+
 ## Contoh Request & Response
 
 ### Create Material (POST /api/materials)
 Request:
+```
 {
   "material_code": "MAT001",
   "name": "Kain Katun",
@@ -39,16 +41,20 @@ Request:
   "buy_price": 150,
   "supplier_id": 5
 }
+```
 
 Response:
+```
 {
   "status": "success",
   "id": 12,
   "message": "Material created successfully"
 }
+```
 
 ### Filter by Type (GET /api/materials?material_type=jeans)
 Response:
+```
 {
   "status": "success",
   "data": [
@@ -63,3 +69,4 @@ Response:
     }
   ]
 }
+```
